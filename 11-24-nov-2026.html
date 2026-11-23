@@ -76,7 +76,6 @@
   :root[data-theme="dark"] .cx-tier rect { fill: #272419; }
   :root[data-theme="dark"] .cx-tier .cx-tier-2 { fill: #3a352a; }
   :root[data-theme="dark"] .cx-tier .cx-tier-3 { fill: #2f5f96; stroke: #2f5f96; }
-  :root[data-theme="dark"] .cx-isle { fill: #2a2720; stroke: #6a6456; }
   :root[data-theme="dark"] .m-land { fill: #2a2720; }
   :root[data-theme="dark"] .m-land.s-priority { fill: #5a2a27; }
   :root[data-theme="dark"] .m-land.s-active { fill: #4a453a; }
@@ -261,7 +260,6 @@
   .cx-tier .cx-tier-2 { fill: #d8d5cd; }
   .cx-tier .cx-tier-3 { fill: var(--blue); stroke: var(--blue); }
   .cx-clock path { fill: none; stroke: var(--ink); stroke-width: 2.4; stroke-linecap: round; }
-  .cx-isle { fill: #e2dfd8; stroke: #9d988d; stroke-width: 1.6; }
   .cx-tagbox rect { fill: var(--cx-paper); stroke: var(--ink-3); stroke-width: 1.4; stroke-dasharray: 4 3; }
   .cx-strip--4 { grid-template-columns: repeat(4, 1fr); }
   @media (max-width: 700px) {
@@ -334,6 +332,8 @@
   .callout p { color: var(--ink); }
   .callout--q { background: var(--panel); padding: 1rem 1.1rem; border-left: 3px solid var(--accent); }
   .callout--q p { font-style: italic; }
+  .callout-list { margin: 0; padding-left: 1.1rem; font-style: italic; }
+  .callout-list li + li { margin-top: 0.4rem; }
 
   /* ===== Conflict map ===== */
   .map-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.6rem 1rem; margin-bottom: 0.75rem; }
@@ -563,7 +563,7 @@
       <h2>Key Learning Topics</h2>
       <span class="sec-sub">Manoeuvre &amp; Sustainment · Sense &amp; Strike</span>
     </div>
-    <p class="cx-intro"><span class="cx-key cx-key-blue"></span>Blue = the side the lesson is drawn from <span class="cx-key cx-key-red"></span>Red = opposing force. Based on Russia–Ukraine and Taiwan Strait reporting. Open the full analysis under each strip for details and sources.</p>
+    <p class="cx-intro"><span class="cx-key cx-key-blue"></span>Blue = the side the lesson is drawn from <span class="cx-key cx-key-red"></span>Red = opposing force. Based on Russia–Ukraine reporting. Open the full analysis under each strip for details and sources.</p>
     <div class="cx-scale" id="confidence">
       <p class="label">How to read the ratings</p>
       <dl>
@@ -731,13 +731,6 @@
       <circle cx="16" cy="16" r="11" style="fill:var(--cx-paper)" stroke="currentColor" stroke-width="2.6"/>
       <path d="M10 13 Q12 9 16 8" stroke="currentColor" stroke-width="1.6" fill="none" opacity="0.6"/>
     </symbol>
-    <symbol id="cx-warship" viewBox="0 0 90 34">
-      <path d="M2 22 L88 22 L80 32 L10 32 Z" style="fill:var(--cx-paper)" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
-      <path d="M30 22 L30 14 L52 14 L52 22" style="fill:var(--cx-paper)" stroke="currentColor" stroke-width="2"/>
-      <path d="M38 14 L38 6 L46 6 L46 14" style="fill:var(--cx-paper)" stroke="currentColor" stroke-width="2"/>
-      <path d="M42 6 L42 1 M22 19 L8 16" stroke="currentColor" stroke-width="2" fill="none"/>
-      <path d="M14 22 L14 18 L22 18 L22 22" style="fill:var(--cx-paper)" stroke="currentColor" stroke-width="2"/>
-    </symbol>
   </defs>
 </svg>
 
@@ -801,54 +794,60 @@
       </details>
     </article>
 
-    <!-- Sense & Strike: warning compression -->
+    <!-- Sense & Strike: resilient strike networks -->
     <article class="topic">
       <div class="fn">Sense &amp; Strike</div>
-      <h3>Warning compression in large, unannounced maritime drills</h3>
-      <p class="cx-tag">Taiwan Strait / western Pacific · 11–24 Nov 2026</p>
-      <p class="cx-conf"><a class="cx-chip" href="#confidence">Preliminary · Medium confidence</a> Medium for the scale and pattern, reported by Reuters from Taiwanese officials. Lower for China’s intent beyond coercive signalling and rehearsal value.</p>
+      <h3>Resilient strike networks: Communications are part of the weapon</h3>
+      <p class="cx-tag">Russia–Ukraine, Kerch Bridge · 11–24 Nov 2026</p>
+      <p class="cx-conf"><a class="cx-chip" href="#confidence">Preliminary</a> Reported through secondary coverage citing the Financial Times. The relay network’s contribution to the strike has not been independently verified.</p>
       <div class="cx-strip">
         <figure class="cx-panel">
-          <svg viewBox="0 0 320 200" role="img" aria-label="Red warships and grey coast-guard ships spread all around an island, labelled more than 100 vessels at one point and no prior notice."><rect class="cx-sea" x="0" y="0" width="320" height="200"/><path class="cx-isle" d="M150 70 Q170 58 177 80 Q184 110 167 134 Q154 148 146 128 Q138 100 150 70 Z"/><text class="cx-label " x="161" y="104" text-anchor="middle">TAIWAN</text><use href="#cx-warship" x="30" y="44" width="44" height="17" class="cx-red" /><use href="#cx-warship" x="200" y="40" width="44" height="17" class="cx-red" /><use href="#cx-warship" x="250" y="72" width="44" height="17" class="cx-red" /><use href="#cx-warship" x="236" y="122" width="44" height="17" class="cx-red" /><use href="#cx-warship" x="150" y="162" width="44" height="17" class="cx-red" /><use href="#cx-warship" x="60" y="152" width="44" height="17" class="cx-red" /><use href="#cx-warship" x="14" y="98" width="44" height="17" class="cx-red" /><use href="#cx-warship" x="88" y="84" width="44" height="17" class="cx-grey" /><use href="#cx-warship" x="194" y="94" width="44" height="17" class="cx-grey" /><text class="cx-label " x="110" y="118" text-anchor="middle">COAST GUARD</text><g class="cx-badge cx-badge-red"><rect x="8" y="8" width="176" height="22" rx="3"/><text x="96.0" y="23" text-anchor="middle">&gt;100 vessels at one point</text></g><text class="cx-label cx-red-t" x="312" y="24" text-anchor="end">NO PRIOR NOTICE</text></svg>
-          <figcaption><span class="cx-n">1</span><strong>Over 100 vessels, no notice.</strong> Taiwanese officials said Chinese military and coast-guard forces massed more than 100 vessels at one point across the western Pacific and around Taiwan, without prior announcement.</figcaption>
+          <svg viewBox="0 0 320 200" role="img" aria-label="A Blue operator’s satellite link to a long-range Blue strike drone is cut, marked with a red cross. The drone is in range but out of reach."><path class="cx-ground" d="M0 180 L320 180"/><use href="#cx-soldier" x="16" y="100" width="44" height="80" class="cx-blue" /><use href="#cx-sat" x="128" y="8" width="64" height="32" class="cx-grey" /><path class="cx-trail cx-grey-s" d="M50 104 L150 42"/><g class="cx-cut"><path d="M92 65 L108 81 M108 65 L92 81"/></g><path class="cx-trail cx-grey-s" d="M170 42 L250 78"/><g transform="translate(300 70) scale(-1 1)"><use href="#cx-prop" x="0" y="0" width="64" height="38" class="cx-blue" /></g><text class="cx-label cx-red-t" x="112" y="122" text-anchor="middle">SERVICE RESTRICTED</text><g class="cx-badge cx-badge-red"><rect x="164" y="150" width="148" height="22" rx="3"/><text x="238.0" y="165" text-anchor="middle">in range, out of reach</text></g></svg>
+          <figcaption><span class="cx-n">1</span><strong>In range, out of reach.</strong> Reported restrictions on satellite connectivity meant Ukrainian long-range systems could still reach a target but lose the link used to control them. SpaceX disputed the restrictions.</figcaption>
         </figure>
         <figure class="cx-panel">
-          <svg viewBox="0 0 320 200" role="img" aria-label="A Blue soldier with a magnifying glass weighs three dashed labels: exercise, coercive signal, blockade rehearsal. A clock warns of less warning time."><path class="cx-ground" d="M0 180 L320 180"/><use href="#cx-soldier" x="16" y="100" width="44" height="80" class="cx-blue" /><use href="#cx-lens" x="56" y="92" width="40" height="40" class="cx-blue" /><g class="cx-tagbox"><rect x="124" y="20" width="180" height="26" rx="3"/><rect x="124" y="56" width="180" height="26" rx="3"/><rect x="124" y="92" width="180" height="26" rx="3"/></g><text class="cx-label " x="214" y="37" text-anchor="middle">EXERCISE?</text><text class="cx-label " x="214" y="73" text-anchor="middle">COERCIVE SIGNAL?</text><text class="cx-label cx-red-t" x="214" y="109" text-anchor="middle">BLOCKADE REHEARSAL?</text><g class="cx-clock"><circle cx="146" cy="154" r="18"/><path d="M146 143 L146 154 L154 159"/></g><text class="cx-label cx-red-t" x="172" y="158">LESS WARNING TIME</text></svg>
-          <figcaption><span class="cx-n">2</span><strong>Drill, signal or rehearsal?</strong> Scale, spread and coast-guard participation make it harder to tell quickly whether a force is exercising, signalling or rehearsing blockade functions, so warning time shrinks.</figcaption>
+          <svg viewBox="0 0 320 200" role="img" aria-label="A Blue operator’s link hops through a chain of Blue relay drones to a strike drone that hits a Red bridge."><path class="cx-ground" d="M0 180 L196 180"/><rect class="cx-sea" x="196" y="150" width="124" height="30"/><path d="M196 148 L320 148 M220 148 L220 180 M262 148 L262 180 M304 148 L304 180" fill="none" style="stroke:var(--accent)" stroke-width="2.4"/><use href="#cx-soldier" x="8" y="100" width="44" height="80" class="cx-blue" /><path class="cx-link cx-blue-s" d="M34 108 L74 86"/><use href="#cx-quad" x="64" y="70" width="40" height="22" class="cx-blue" /><path class="cx-link cx-blue-s" d="M96 76 L140 56"/><use href="#cx-quad" x="130" y="40" width="40" height="22" class="cx-blue" /><path class="cx-link cx-blue-s" d="M164 56 L196 66"/><use href="#cx-quad" x="190" y="60" width="40" height="22" class="cx-blue" /><text class="cx-label cx-blue-t" x="150" y="30" text-anchor="middle">MESH RELAY</text><path class="cx-link cx-blue-s" d="M216 82 L236 98"/><g transform="translate(276 94) scale(-1 1)"><use href="#cx-prop" x="0" y="0" width="44" height="26" class="cx-blue" /></g><use href="#cx-burst" x="266" y="122" width="40" height="40" class="cx-red" /><text class="cx-label cx-red-t" x="258" y="196" text-anchor="middle">KERCH BRIDGE</text><g class="cx-badge "><rect x="236" y="10" width="76" height="22" rx="3"/><text x="274.0" y="25" text-anchor="middle">15–16 Nov</text></g></svg>
+          <figcaption><span class="cx-n">2</span><strong>Relay drones carry the link.</strong> In the 15–16 November Kerch Bridge strikes, drones carrying mesh radios reportedly relayed communications between operators and strike systems, as one part of a wider combined operation.</figcaption>
         </figure>
         <figure class="cx-panel">
-          <svg viewBox="0 0 320 200" role="img" aria-label="A Blue soldier points at three narrowing tiers, from large exercise, to coercive positioning, to interdiction, and asks which signs tip it over."><path class="cx-ground" d="M0 180 L320 180"/><use href="#cx-soldier-point" x="16" y="100" width="44" height="80" class="cx-blue" /><g class="cx-tier"><rect x="130" y="70" width="180" height="28"/><rect class="cx-tier-2" x="130" y="106" width="140" height="28"/><rect class="cx-tier-3" x="130" y="142" width="90" height="28"/></g><text class="cx-label " x="140" y="88">LARGE EXERCISE</text><text class="cx-label " x="140" y="124">COERCIVE POSITIONING</text><text class="cx-label cx-white-t" x="140" y="160">INTERDICTION</text><g class="cx-bubble"><rect x="6" y="10" width="128" height="44" rx="10"/><path d="M30 53 L46 53 L40 100 Z"/><path d="M31.5 53 L44.5 53" class="cx-seam"/><text x="70.0" y="30" text-anchor="middle">Which signs</text><text x="70.0" y="46" text-anchor="middle">tip it over?</text></g></svg>
-          <figcaption><span class="cx-n">3</span><strong>Watch for the tipping point.</strong> The reporting does not show a blockade or an imminent attack. The open question is which indicators mark the shift from a coercive drill to sustained interdiction.</figcaption>
+          <svg viewBox="0 0 320 200" role="img" aria-label="A Blue soldier points at three test questions: mission completed, operator workload, safe if the link is lost, and asks whether it works without the main link."><path class="cx-ground" d="M0 180 L320 180"/><use href="#cx-soldier-point" x="16" y="100" width="44" height="80" class="cx-blue" /><g class="cx-tagbox"><rect x="124" y="64" width="186" height="26" rx="3"/><rect x="124" y="100" width="186" height="26" rx="3"/><rect x="124" y="136" width="186" height="26" rx="3"/></g><text class="cx-label " x="217" y="81" text-anchor="middle">MISSION COMPLETED?</text><text class="cx-label " x="217" y="117" text-anchor="middle">OPERATOR WORKLOAD?</text><text class="cx-label cx-red-t" x="217" y="153" text-anchor="middle">SAFE IF THE LINK IS LOST?</text><g class="cx-bubble"><rect x="6" y="10" width="140" height="44" rx="10"/><path d="M30 53 L46 53 L40 100 Z"/><path d="M31.5 53 L44.5 53" class="cx-seam"/><text x="76.0" y="30" text-anchor="middle">Does it work</text><text x="76.0" y="46" text-anchor="middle">without the link?</text></g></svg>
+          <figcaption><span class="cx-n">3</span><strong>Prove it degraded.</strong> An alternative link is not resilient until a mission succeeds without the main service, counting the extra equipment, operator workload and safe behaviour if the link is lost.</figcaption>
         </figure>
       </div>
       <p class="cx-swipe" aria-hidden="true">Swipe for the next panel →</p>
       <div class="cx-take">
-        <p><span class="label">Lesson</span>Size alone is not the warning. Large, unannounced and widely spread deployments, with coast-guard ships mixed in, shorten the time available to tell an exercise from preparation for a blockade.</p>
-        <p><span class="label">Questions to ask</span>Which indicators would show that a large unannounced drill is turning into sustained interdiction, and how quickly could they be recognised?</p>
+        <p><span class="label">Lesson</span>A strike capability is only as usable as its network. Ukraine reportedly kept control of long-range drones by relaying commands through mesh radios on other drones when satellite access was restricted.</p>
+        <p><span class="label">Questions to ask</span>Do trials test whether the mission still succeeds when the main communications service is unavailable, rather than only the weapon’s range under ideal connectivity?</p>
       </div>
       <details class="cx-full">
         <summary>Read the full analysis</summary>
         <dl class="meta">
-          <dt>Theatre</dt><dd>Taiwan Strait / western Pacific</dd>
+          <dt>Theatre</dt><dd>Russia–Ukraine</dd>
           <dt>Reporting period</dt><dd>11–24 November 2026</dd>
-          <dt>Function</dt><dd>Sense and strike</dd>
-          <dt>Learning status</dt><dd>Preliminary observation. Confidence is medium for the scale and pattern reported by Taiwanese officials; lower for precise Chinese intent beyond coercive signalling and rehearsal value.</dd>
+          <dt>Function</dt><dd>Sense and strike, with links to communications</dd>
+          <dt>Learning status</dt><dd>Preliminary observation. The communications arrangement is reported through secondary coverage citing the Financial Times; its independent contribution to strike success remains unverified.</dd>
         </dl>
         <table class="findings">
           <thead><tr><th>Question</th><th>Preliminary findings</th></tr></thead>
           <tbody>
-            <tr><td>Operating problem</td><td>Defenders and regional partners need to identify when large-scale military activity is routine training, when it is coercive signalling, and when it might be setting conditions for an interdiction or attack. The problem becomes harder when the force package is large, geographically distributed and not formally announced. <span class="cite">Source: <a href="https://www.reuters.com/world/china/china-stages-unannounced-pacific-drills-silent-intimidation-taiwan-officials-say-2026-11-13/" target="_blank" rel="noopener">Reuters, 13 Nov</a></span></td></tr>
-            <tr><td>Specific observation</td><td>Reuters reported that Chinese military and coast guard forces massed more than 100 vessels at one point across the western Pacific and around Taiwan earlier in November, while Taiwan’s defence minister separately described “area denial” drills involving carrier and other naval formations. The deployment reportedly included coordinated forces from multiple theatre commands and simulated attacks on other militaries and cities including Taiwan’s. <span class="cite">Source: <a href="https://www.reuters.com/world/china/china-stages-unannounced-pacific-drills-silent-intimidation-taiwan-officials-say-2026-11-13/" target="_blank" rel="noopener">Reuters, 13 Nov</a> · <a href="https://www.reuters.com/world/china/taiwan-says-china-is-conducting-area-denial-drills-western-pacific-2026-11-10/" target="_blank" rel="noopener">Reuters, 10 Nov</a></span></td></tr>
-            <tr><td>What remains unproven</td><td>The reporting reviewed does not establish that China initiated an actual blockade or intended an immediate attack. It instead supports a narrower assessment: Beijing demonstrated a force-employment pattern that reduces the time available for others to distinguish major exercise activity from coercive operational positioning.</td></tr>
+            <tr><td>Operating problem</td><td>Long-range weapons may remain physically capable of reaching a target while losing access to the communications service supporting their employment. Reported restrictions on satellite connectivity created this dependency problem for Ukrainian systems. The restrictions were disputed by SpaceX, so their precise application should not be treated as settled. <span class="cite">Source: <a href="https://arstechnica.com/gadgets/2026/11/ukraine-blew-up-putins-bridge-using-relay-drones-to-bypass-starlink-limits/" target="_blank" rel="noopener">Ars Technica</a></span></td></tr>
+            <tr><td>Ukraine’s adaptation</td><td>Reporting on the 15–16 November Kerch Bridge strikes described drones carrying mesh radios that relayed communications between operators and strike systems. This reportedly provided an alternative to the satellite service normally used, illustrating adaptation of the supporting network rather than simply development of a longer-range weapon.</td></tr>
+            <tr><td>What enabled the reported result</td><td>The communications arrangement formed one part of a wider operation that reportedly included preparatory attacks against Russian defensive systems and coordinated missile and drone employment. The available evidence does not isolate the mesh network as the decisive factor; it describes an enabling component within a combined operation.</td></tr>
+            <tr><td>What remains unproven</td><td>The reviewed report does not quantify network availability, resistance to interference, relay losses or performance after individual nodes failed. It therefore supports the reported use of an alternative communications architecture, not proof of uninterrupted control in a heavily contested electromagnetic environment.</td></tr>
           </tbody>
         </table>
         <div class="callout">
           <div class="label">Preliminary observations</div>
-          <p>The learning point is not simply that China used a bigger force package. It is that unannounced massing, distributed positioning and coast-guard participation can compress warning time, complicate legal-political interpretation and create ambiguity over whether the force is demonstrating, rehearsing blockade functions or preparing for more direct coercion. <span class="cite">Source: <a href="https://www.reuters.com/default/chinas-area-denial-drills-send-message-taiwan-well-beyond-2026-11-13/" target="_blank" rel="noopener">Reuters, 13 Nov</a></span></p>
+          <p>A strike capability’s usable reach depends on its supporting network, not weapon range alone. The analytical implication is to evaluate sensing, communications, control and weapons as a complete mission system — including whether the mission remains feasible when a principal service is restricted or unavailable.</p>
+          <p>An alternative communications path should not automatically be labelled resilient. Its value must be demonstrated through mission completion under degraded conditions, accounting for additional equipment, operator workload and dependence on the alternative network.</p>
         </div>
         <div class="callout callout--q">
-          <div class="label">Validation question</div>
-          <p>Which indicators most clearly separate a large, unannounced coercive drill from a transition toward sustained maritime interdiction or blockade enforcement?</p>
+          <div class="label">To consider</div>
+          <ul class="callout-list">
+            <li><b>Capability evaluation:</b> Do trials assess end-to-end mission completion when the primary communications service is unavailable, rather than demonstrate weapon range under ideal connectivity?</li>
+            <li><b>Operational dependency:</b> Which sensing and strike functions depend on external services, permissions or infrastructure outside the formation’s control?</li>
+            <li><b>Degraded operation:</b> Are fallback arrangements tested for their actual limitations, including workload, delays and safe loss-of-link behaviour?</li>
+          </ul>
         </div>
       </details>
     </article>
